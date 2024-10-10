@@ -1,50 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
-
-$darkest-blue: #1a237e;
-$darker-blue: #283593;
-$dark-blue: #303f9f;
-$medium-blue: #3949ab;
-$light-blue: #3f51b5;
-$lighter-blue: #5c6bc0;
-$lightest-blue: #9fa8da;
-$white: #ffffff;
-$black: #0e1442;
-$orange: #ffb300;
-$yellow: #fdd835;
-$dark-pink: #ad1457;
-$light-pink: #d81b60;
-
-@charset "UTF-8";
-* {
-  outline: none;
+/* Fonts locally hosted */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-
-html,
-body {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  background: #ffffff;
   margin: 0;
   padding: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: $white;
-  cursor: default;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
-  color: $white;
+  color: #ffffff;
   display: block;
   transition-duration: 0.3s;
 }
@@ -54,62 +26,43 @@ ul {
   padding: 0;
 }
 
-h2 {
-}
-
-h3 {
-  color: $orange;
-  margin: 10px 0;
-  text-transform: lowercase;
-  font-size: 1.25em;
-}
-
 .resume {
   width: 960px;
-  background: $darkest-blue;
-  color: $white;
+  background: #1a237e;
+  color: #ffffff;
   margin: 20px auto;
-  box-shadow: 10px 10px $black;
+  box-shadow: 10px 10px #0e1442;
   position: relative;
   display: flex;
 }
-.resume .base,
-.resume .func {
-  box-sizing: border-box;
-  float: left;
-}
-.resume .base > div,
-.resume .func > div {
-  padding-bottom: 10px;
-}
-.resume .base > div:last-of-type,
-.resume .func > div:last-of-type {
-  padding-bottom: 0;
-}
+
 .resume .base {
   width: 30%;
   padding: 30px 15px;
-  background: $darker-blue;
-  color: $white;
+  background: #283593;
+  color: #ffffff;
 }
+
 .resume .base .profile {
-  background: $orange;
+  background: #ffb300;
   padding: 30px 15px 40px 15px;
   margin: -30px -15px 45px -15px;
   position: relative;
-  z-index: 2;
 }
+
 .resume .base .profile::after {
   content: "";
   position: absolute;
-  background: $dark-blue;
+  background: #303f9f;
   width: 100%;
   height: 30px;
   bottom: -15px;
   left: 0;
   transform: skewY(-5deg);
-  z-index: -1;
 }
+
+/* More of your original styling with static values goes here... */
+
 .resume .base .profile .photo img {
   width: 100%;
   border-radius: 50%;
